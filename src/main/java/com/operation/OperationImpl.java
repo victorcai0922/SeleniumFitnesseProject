@@ -3,16 +3,19 @@
  */
 package com.operation;
 
+import java.io.File;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Cookie;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.internal.selenesedriver.TakeScreenshot;
 import org.openqa.selenium.remote.Augmenter;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -163,6 +166,20 @@ public class OperationImpl implements Operation {
 		// TODO Auto-generated method stub
 		BrowerDriver.driver.manage().timeouts().implicitlyWait(time, unit);
 		
+	}
+
+	public File takeScreenShot() {
+		// TODO Auto-generated method stub
+		WebDriver driver = new Augmenter().augment(BrowerDriver.driver);
+		File screenshot = ((TakesScreenshot)driver).
+                getScreenshotAs(OutputType.FILE);
+		return screenshot;
+	}
+
+	public String getTitle() {
+		// TODO Auto-generated method stub
+		String title = BrowerDriver.driver.getTitle();
+		return title;
 	}
 
 	

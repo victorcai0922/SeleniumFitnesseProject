@@ -3,6 +3,7 @@
  */
 package com.operation;
 
+import java.io.File;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.Alert;
@@ -138,6 +139,20 @@ public interface  Operation {
 	 * @param timeType
 	 */
 	public void implicitWait(long time,TimeUnit until);
+	
+	/**
+	 * take screen shot operation
+	 *  when use this method you should set the driver as the remote web driver
+	 *  and this method will return the screen shot as the file format
+	 * @return
+	 */
+	public File takeScreenShot();
+	
+	/**
+	 * get title from the page!
+	 * @return
+	 */
+	public String getTitle();
 	
 
 }

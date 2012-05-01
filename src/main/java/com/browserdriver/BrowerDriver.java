@@ -69,9 +69,9 @@ public class BrowerDriver {
 	public static void setWebDriver(Driver driverType) {
 		switch(driverType){
 		case IE:
-			DesiredCapabilities isCapabilities = DesiredCapabilities.internetExplorer();
-			isCapabilities.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
-			driver = new InternetExplorerDriver(isCapabilities);
+//			DesiredCapabilities isCapabilities = DesiredCapabilities.internetExplorer();
+//			isCapabilities.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
+			driver = new InternetExplorerDriver(dc);
 			break;
 		case Chrome:
 			driver = new ChromeDriver();
