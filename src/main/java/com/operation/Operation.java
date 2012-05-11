@@ -24,49 +24,56 @@ public interface  Operation {
 	 * @return
 	 */
 	
-	public Element findElementById(String id);
+	public WebElement findElementById(String id);
 	
 	/**
 	 * 
 	 * @param name
 	 * @return
 	 */
-	public Element findElementByName(String name);
+	public WebElement findElementByName(String name);
 	
 	/**
 	 * 
 	 * @param className
 	 * @return
 	 */
-	public Element findElementByClassName(String className);
+	public WebElement findElementByClassName(String className);
 	
 	/**
 	 * 
 	 * @param tagName
 	 * @return
 	 */
-	public Element findElementByTagName(String tagName);
+	public WebElement findElementByTagName(String tagName);
 	
 	/**
 	 * 
 	 * @param linkText
 	 * @return
 	 */
-	public Element findElementByLinkText(String linkText);
+	public WebElement findElementByLinkText(String linkText);
 	
 	/**
 	 * 
 	 * @param partialLinkText
 	 * @return
 	 */
-	public Element findElementByPartialLinkText(String partialLinkText);
+	public WebElement findElementByPartialLinkText(String partialLinkText);
 	
 	/**
 	 * 
 	 * @param xpath
 	 * @return
 	 */
-	public Element findElementByXpath(String xpath);
+	public WebElement findElementByXpath(String xpath);
+	
+	/**
+	 * find element by css selector
+	 * @param cssSelect
+	 * @return
+	 */
+	public WebElement findElementByCssSelect(String cssSelect);
 	
 	/**
 	 * 

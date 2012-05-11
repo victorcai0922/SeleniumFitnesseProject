@@ -31,27 +31,27 @@ public class OperationImpl implements Operation {
 	/* (non-Javadoc)
 	 * @see com.operation.Operation#findElementById(java.lang.String)
 	 */
-	public Element findElementById(String id) {
+	public WebElement findElementById(String id) {
 		// TODO Auto-generated method stub
 		By byid = new By.ById(id);
 		WebElement element = BrowerDriver.driver.findElement(byid);
-		return (Element) element;
+		return  element;
 	}
 
 	/* (non-Javadoc)
 	 * @see com.operation.Operation#findElementByName(java.lang.String)
 	 */
-	public Element findElementByName(String name) {
+	public WebElement findElementByName(String name) {
 		// TODO Auto-generated method stub
 		By byname = new By.ByName(name);
 		WebElement element = BrowerDriver.driver.findElement(byname);
-		return (Element) element;
+		return  element;
 	}
 
 	/* (non-Javadoc)
 	 * @see com.operation.Operation#findElementByClassName(java.lang.String)
 	 */
-	public Element findElementByClassName(String className) {
+	public WebElement findElementByClassName(String className) {
 		// TODO Auto-generated method stub
 		By byClassName = By.className(className);
 		WebElement element = BrowerDriver.driver.findElement(byClassName);
@@ -61,41 +61,41 @@ public class OperationImpl implements Operation {
 	/* (non-Javadoc)
 	 * @see com.operation.Operation#findElementByTagName(java.lang.String)
 	 */
-	public Element findElementByTagName(String tagName) {
+	public WebElement findElementByTagName(String tagName) {
 		// TODO Auto-generated method stub
 		By byTagName = By.tagName(tagName);
 		WebElement element = BrowerDriver.driver.findElement(byTagName);
-		return (Element) element;
+		return  element;
 	}
 
 	/* (non-Javadoc)
 	 * @see com.operation.Operation#findElementByLinkText(java.lang.String)
 	 */
-	public Element findElementByLinkText(String linkText) {
+	public WebElement findElementByLinkText(String linkText) {
 		// TODO Auto-generated method stub
 		By bylinkText = By.linkText(linkText);
 		WebElement element = BrowerDriver.driver.findElement(bylinkText);
-		return (Element) element;
+		return  element;
 	}
 
 	/* (non-Javadoc)
 	 * @see com.operation.Operation#findElementByPartialLinkText(java.lang.String)
 	 */
-	public Element findElementByPartialLinkText(String partialLinkText) {
+	public WebElement findElementByPartialLinkText(String partialLinkText) {
 		// TODO Auto-generated method stub
 		By bypartialLinkText = By.partialLinkText(partialLinkText);
 		WebElement element = BrowerDriver.driver.findElement(bypartialLinkText);
-		return (Element) element;
+		return  element;
 	}
 
 	/* (non-Javadoc)
 	 * @see com.operation.Operation#findElementByXpath(java.lang.String)
 	 */
-	public Element findElementByXpath(String xpath) {
+	public WebElement findElementByXpath(String xpath) {
 		// TODO Auto-generated method stub
 		By byxpath = By.xpath(xpath);
 		WebElement element = BrowerDriver.driver.findElement(byxpath);
-		return (Element) element;
+		return element;
 	}
 
 	public void getPage(String url) {
@@ -180,6 +180,12 @@ public class OperationImpl implements Operation {
 		// TODO Auto-generated method stub
 		String title = BrowerDriver.driver.getTitle();
 		return title;
+	}
+
+	public WebElement findElementByCssSelect(String cssSelect) {
+		// TODO Auto-generated method stub
+		WebElement element = BrowerDriver.driver.findElement(By.cssSelector(cssSelect));
+		return element;
 	}
 
 	
