@@ -4,6 +4,7 @@
 package com.operation;
 
 import java.io.File;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.Alert;
@@ -55,7 +56,7 @@ public class OperationImpl implements Operation {
 		// TODO Auto-generated method stub
 		By byClassName = By.className(className);
 		WebElement element = BrowerDriver.driver.findElement(byClassName);
-		return (Element) element;
+		return  element;
 	}
 
 	/* (non-Javadoc)
@@ -186,6 +187,16 @@ public class OperationImpl implements Operation {
 		// TODO Auto-generated method stub
 		WebElement element = BrowerDriver.driver.findElement(By.cssSelector(cssSelect));
 		return element;
+	}
+
+	public List<WebElement> findElementsByClass(String className) {
+		// TODO Auto-generated method stub
+		return BrowerDriver.driver.findElements(By.className(className));
+	}
+
+	public List<WebElement> findElementsByCssSeletor(String cssSeletor) {
+		// TODO Auto-generated method stub
+		return BrowerDriver.driver.findElements(By.cssSelector(cssSeletor));
 	}
 
 	

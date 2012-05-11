@@ -4,6 +4,7 @@
 package com.operation;
 
 import java.io.File;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.Alert;
@@ -74,6 +75,11 @@ public interface  Operation {
 	 * @return
 	 */
 	public WebElement findElementByCssSelect(String cssSelect);
+	
+	
+	public List<WebElement> findElementsByClass(String className);
+	
+	public List<WebElement> findElementsByCssSeletor(String cssSeletor);
 	
 	/**
 	 * 
