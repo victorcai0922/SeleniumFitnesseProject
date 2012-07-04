@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<!--要调度的对象 -->
+
+	<bean id="propertyConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:login.properties</value>
+				<!--more config file, add here -->
+			</list>
+		</property>
+	</bean>
+	<!-- page operation -->
+	<bean id ="operation" class="com.operation.OperationImpl"/>
+	   
+    <!--Read login properties here-->
+	<bean id="login" class="com.testscript.SeleniumForShengpay">
+	    <property name="operation" ref="operation"/>
+		<property name="ptid">
+			<value>${login.usernameinput}</value>
+		</property>
+		<property name="ptpwd">
+			<value>${login.userpwdinput}</value>
+		</property>
+		<property name="submitbtnid">
+			<value>${login.loginbtn}</value>
+		</property>
+	</bean>
+	
+	
+	
+
+   
+
+</beans>

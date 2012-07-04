@@ -88,6 +88,12 @@ public class BrowerDriver {
 		 
 	}
 	
+	public static void quitTheDriver(){
+		if(driver != null){
+			driver.quit();
+		}
+	}
+	
 	
 	public static void changeTheUserAgent(){
 		FirefoxProfile profile = new FirefoxProfile();

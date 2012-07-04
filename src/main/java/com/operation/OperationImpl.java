@@ -56,7 +56,7 @@ public class OperationImpl implements Operation {
 		// TODO Auto-generated method stub
 		By byClassName = By.className(className);
 		WebElement element = BrowerDriver.driver.findElement(byClassName);
-		return  element;
+		return element;
 	}
 
 	/* (non-Javadoc)
